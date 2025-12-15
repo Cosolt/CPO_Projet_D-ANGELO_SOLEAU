@@ -17,4 +17,8 @@ public class EssaiProjet {
         // TODO code application logic here
     }
     
+    
+   
+    int a = 0;
+    
 }
