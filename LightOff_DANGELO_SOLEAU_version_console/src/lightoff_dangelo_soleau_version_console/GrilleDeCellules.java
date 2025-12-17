@@ -85,6 +85,22 @@ public class GrilleDeCellules {
         }
     }
     
+    /**
+     * Vérifie si toutes les cellules de la grille sont éteintes.
+     * Une cellule est considérée éteinte si son état est `false`.
+     * @return `true` si toutes les cellules sont éteintes, sinon `false`.
+     */
+    public boolean cellulesToutesEteintes() {
+        for (int i = 0; i < nbLignes; i++) {
+            for (int j = 0; j < nbColonnes; j++) {
+                if (matriceCellules[i][j].getEtat()) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+    
     
     
     
