@@ -4,6 +4,8 @@
  */
 package lightoff_dangelo_soleau_version_console;
 
+import java.util.Random;
+
 /**
  *
  * @author evada
@@ -69,6 +71,19 @@ public class GrilleDeCellules {
         }
     }
     
+    /**
+     * Mélange aléatoirement la grille en activant des motifs en croix à des positions aléatoires un nombre donné de fois.
+     * @param nbTours le nombre d'itérations pour mélanger la grille.
+     */
+    public void melangerMatriceAleatoirement(int nbTours) {
+        Random random = new Random();
+        eteindreToutesLesCellules();
+        for (int n = 0; n < nbTours; n++) {
+            int ligne = (int) (Math.random() * nbLignes);
+            int colonne = (int) (Math.random() * nbColonnes);
+            activerCroix(ligne, colonne);
+        }
+    }
     
     
     
