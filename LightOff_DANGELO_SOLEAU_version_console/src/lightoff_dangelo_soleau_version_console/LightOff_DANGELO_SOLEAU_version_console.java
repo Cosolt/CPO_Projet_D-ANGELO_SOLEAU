@@ -20,6 +20,7 @@ public class LightOff_DANGELO_SOLEAU_version_console {
        
         GrilleDeCellules grille = new GrilleDeCellules(5, 5) ;
         System.out.println(grille);
+        
     }
     
 }

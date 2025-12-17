@@ -16,6 +16,8 @@ public class GrilleDeCellules {
     int nbColonnes;
     CelluleLumineuse[][] matriceCellules;
     
+    
+    
     /**
      * Constructeur de la classe GrilleDeJeu. Initialise une grille avec un nombre
      * de lignes et de colonnes spécifié, et crée une matrice de cellules lumineuses.
@@ -34,6 +36,10 @@ public class GrilleDeCellules {
         }
     }
     
+    
+    
+    
+    
     /**
      * Éteint toutes les cellules de la grille en appelant la méthode
      * `eteindreCellule()` sur chaque cellule de la matrice.
@@ -45,6 +51,8 @@ public class GrilleDeCellules {
             }
         }
     }
+    
+    
     
     /**
      * Active une cellule donnée et ses voisines adjacentes en croix
@@ -72,6 +80,8 @@ public class GrilleDeCellules {
         }
     }
     
+    
+    
     /**
      * Mélange aléatoirement la grille en activant des motifs en croix à des positions aléatoires un nombre donné de fois.
      * @param nbTours le nombre d'itérations pour mélanger la grille.
@@ -85,6 +95,8 @@ public class GrilleDeCellules {
             activerCroix(ligne, colonne);
         }
     }
+    
+    
     
     /**
      * Vérifie si toutes les cellules de la grille sont éteintes.
@@ -101,6 +113,8 @@ public class GrilleDeCellules {
         }
         return true;
     }
+    
+    
     
     /**
      * Retourne une représentation textuelle de la grille, affichant les indices
@@ -133,7 +147,11 @@ public class GrilleDeCellules {
         }
 
         return sb.toString();
-    }            
+    }   
+    
+    
+    
+    
 }
 
 
