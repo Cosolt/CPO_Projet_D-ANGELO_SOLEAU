@@ -15,11 +15,10 @@ public class CelluleLumineuse {
     /**
      * Constructeur par défaut de la classe
      * initialise la cellule à l'état false donc éteint
-     * @param etat
      */
-    public CelluleLumineuse(boolean etat) {
+    public CelluleLumineuse() {
         this.etat = false;
-        System.out.println("La cellule est éteinte");
+        
     }
     
     
@@ -29,7 +28,7 @@ public class CelluleLumineuse {
      */
     public void activerCellule(){
         this.etat = !this.etat;
-        System.out.println("La cellule est allumée");
+        System.out.println("La cellule est allumee");
     }
     
     
@@ -39,7 +38,7 @@ public class CelluleLumineuse {
      */
     public void eteindreCellule(){
         this.etat = false;
-        System.out.println("La cellule est éteinte");
+        System.out.println("La cellule est eteinte");
     }
     
     

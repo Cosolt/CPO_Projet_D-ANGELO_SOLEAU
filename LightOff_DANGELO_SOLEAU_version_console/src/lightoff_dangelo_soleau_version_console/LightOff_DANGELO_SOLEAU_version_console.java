@@ -15,12 +15,11 @@ public class LightOff_DANGELO_SOLEAU_version_console {
      */
     public static void main(String[] args) {
         CelluleLumineuse cellule = new CelluleLumineuse(false) ;
-        
         cellule.activerCellule() ;
-        
         cellule.eteindreCellule() ;
        
-        
+        GrilleDeCellules grille = new GrilleDeCellules(5, 5) ;
+        System.out.println(grille);
     }
     
 }
