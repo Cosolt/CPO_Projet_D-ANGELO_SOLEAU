@@ -9,5 +9,34 @@ package lightoff_dangelo_soleau_version_console;
  * @author colin
  */
 public class CelluleLumineuse {
+    private boolean etat ;
+
     
+    public CelluleLumineuse(boolean etat) {
+        this.etat = true;
+    }
+    
+    
+    public void activerCellule(){
+        this.etat = !this.etat;
+    }
+    
+    public void eteindreCellule(){
+        this.etat = false;
+    }
+    
+    public boolean estEteint(){
+        return !this.etat;
+    }
+
+    public boolean getEtat() {
+        return this.etat;
+    }
+
+    @Override
+    public String toString() {
+        return this.etat ? "X" : "O";
+    }
+
+      
 }
