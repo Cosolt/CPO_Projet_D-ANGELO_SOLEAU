@@ -31,7 +31,17 @@ public class GrilleDeCellules {
         }
     }
     
-    
+    /**
+     *Éteint toutes les cellules de la grille en appelant la méthode
+     * `eteindreCellule()` sur chaque cellule de la matrice.
+     */
+    public void eteindreToutesLesCellules() {
+        for (int i = 0; i < nbLignes; i++) {
+            for (int j = 0; j < nbColonnes; j++) {
+                this.matriceCellules[i][j].eteindreCellule();
+            }
+        }
+    }
     
     
     
