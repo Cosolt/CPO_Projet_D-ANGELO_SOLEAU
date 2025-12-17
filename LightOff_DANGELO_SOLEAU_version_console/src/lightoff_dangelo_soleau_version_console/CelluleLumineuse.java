@@ -12,45 +12,52 @@ public class CelluleLumineuse {
     private boolean etat ;
 
     
-    
     /**
-     *
+     * Constructeur par défaut de la classe
+     * initialise la cellule à l'état false donc éteint
      * @param etat
      */
     public CelluleLumineuse(boolean etat) {
-        this.etat = true;
+        this.etat = false;
     }
     
+    
     /**
-     *
+     * Permet d'inverser l'état actuel de la cellule
+     * Si éteint alors devient allumée, et vice-versa
      */
     public void activerCellule(){
         this.etat = !this.etat;
     }
     
+    
     /**
-     *
+     * Permet de mettre la cellule à l'état éteint
+     * Quelque soit l'état de la cellule, elle permet d'éteindre celle-ci
      */
     public void eteindreCellule(){
         this.etat = false;
     }
     
+    
     /**
-     *
+     * Vérifie si la cellule est éteinte ou non
      * @return
      */
     public boolean estEteint(){
         return !this.etat;
     }
 
+    
     /**
-     *
+     * Retourne l'état actuel de la cellule
      * @return
      */
     public boolean getEtat() {
         return this.etat;
     }
 
+    
     @Override
     public String toString() {
         return this.etat ? "X" : "O";
