@@ -101,9 +101,38 @@ public class GrilleDeCellules {
         return true;
     }
     
-    
-    
-    
+    /**
+     * Retourne une représentation textuelle de la grille, affichant les indices
+     * des lignes et colonnes ainsi que l'état de chaque cellule ('X' pour allumée,'O' pour éteinte).
+     * @return une chaîne de caractères représentant la grille.
+     */
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+
+        // Ajouter les indices de colonnes
+        sb.append("    ");
+        for (int j = 0; j < nbColonnes; j++) {
+            sb.append(String.format("| %d ", j));
+        }
+        sb.append("|\n");
+        // Ligne de séparation
+        sb.append("    ");
+        sb.append("-".repeat(4 * nbColonnes));
+        sb.append("\n");
+         // Ajouter chaque ligne de la matrice
+        for (int i = 0; i < nbLignes; i++) {
+            sb.append(String.format("%d | ", i)); // Indice de ligne
+            for (int j = 0; j < nbColonnes; j++) {
+                sb.append(matriceCellules[i][j].getEtat() ? "X | " : "O | ");
+            }
+            sb.append("\n    ");
+            sb.append("-".repeat(4 * nbColonnes));
+            sb.append("\n");
+        }
+
+        return sb.toString();
+    }            
 }
 
 
