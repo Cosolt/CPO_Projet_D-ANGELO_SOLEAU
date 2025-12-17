@@ -19,6 +19,7 @@ public class CelluleLumineuse {
      */
     public CelluleLumineuse(boolean etat) {
         this.etat = false;
+        System.out.println("La cellule est éteinte");
     }
     
     
@@ -28,6 +29,7 @@ public class CelluleLumineuse {
      */
     public void activerCellule(){
         this.etat = !this.etat;
+        System.out.println("La cellule est allumée");
     }
     
     
@@ -37,6 +39,7 @@ public class CelluleLumineuse {
      */
     public void eteindreCellule(){
         this.etat = false;
+        System.out.println("La cellule est éteinte");
     }
     
     
@@ -58,10 +61,7 @@ public class CelluleLumineuse {
     }
 
     
-    @Override
-    public String toString() {
-        return this.etat ? "X" : "O";
-    }
-
       
+    
+    
 }

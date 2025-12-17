@@ -14,7 +14,13 @@ public class LightOff_DANGELO_SOLEAU_version_console {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        CelluleLumineuse cellule = new CelluleLumineuse(false) ;
+        
+        cellule.activerCellule() ;
+        
+        cellule.eteindreCellule() ;
+       
+        
     }
     
 }
