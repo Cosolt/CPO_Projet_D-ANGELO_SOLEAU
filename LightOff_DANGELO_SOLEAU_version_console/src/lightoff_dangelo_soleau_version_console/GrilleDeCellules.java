@@ -25,6 +25,7 @@ public class GrilleDeCellules {
     public GrilleDeCellules(int nbLignes, int nbColonnes) {
         this.nbLignes = nbLignes;
         this.nbColonnes = nbColonnes;
+        matriceCellules = new CelluleLumineuse[nbLignes][nbColonnes];
         
         for (int i = 0; i<nbLignes; i++) {
             for (int j = 0; j<nbColonnes; j++) {
