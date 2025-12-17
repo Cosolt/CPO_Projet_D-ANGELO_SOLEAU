@@ -12,23 +12,41 @@ public class CelluleLumineuse {
     private boolean etat ;
 
     
+    
+    /**
+     *
+     * @param etat
+     */
     public CelluleLumineuse(boolean etat) {
         this.etat = true;
     }
     
-    
+    /**
+     *
+     */
     public void activerCellule(){
         this.etat = !this.etat;
     }
     
+    /**
+     *
+     */
     public void eteindreCellule(){
         this.etat = false;
     }
     
+    /**
+     *
+     * @return
+     */
     public boolean estEteint(){
         return !this.etat;
     }
 
+    /**
+     *
+     * @return
+     */
     public boolean getEtat() {
         return this.etat;
     }
