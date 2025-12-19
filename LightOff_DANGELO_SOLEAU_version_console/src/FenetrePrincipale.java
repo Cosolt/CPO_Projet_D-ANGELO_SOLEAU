@@ -1,3 +1,7 @@
+
+import java.awt.GridLayout;
+import javax.swing.JButton;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -16,6 +20,20 @@ public class FenetrePrincipale extends javax.swing.JFrame {
      */
     public FenetrePrincipale() {
         initComponents();
+        
+        int nbLignes = 5;
+        int nbColonnes = 5;
+        PanneauGrille.setLayout(new GridLayout(nbLignes, nbColonnes));
+        for (int i=0; i < nbLignes; i++) {
+            for (int j=0; j < nbColonnes; j++ ) {
+                JButton bouton_cellule = new JButton(); // création d'un bouton
+                PanneauGrille.add(bouton_cellule); // ajout au Jpanel PanneauGrille
+            }
+        }
+
+        
+        
+        
     }
 
     /**
