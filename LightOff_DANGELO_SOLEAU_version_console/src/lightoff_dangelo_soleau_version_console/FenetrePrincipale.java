@@ -2,6 +2,7 @@ package lightoff_dangelo_soleau_version_console;
 
 
 import java.awt.GridLayout;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 
 /*
@@ -41,11 +42,16 @@ public class FenetrePrincipale extends javax.swing.JFrame {
             }
         }
 
+        
     }
-        public void initialiserPartie() {
-            grille.cellulesToutesEteintes();
-            grille.melangerMatriceAleatoirement(10);
-        }
+    
+    
+    public void initialiserPartie() {
+        grille.cellulesToutesEteintes();
+        grille.melangerMatriceAleatoirement(10);
+    }
+        
+        
         
         
 
@@ -59,27 +65,46 @@ public class FenetrePrincipale extends javax.swing.JFrame {
     private void initComponents() {
 
         PanneauGrille = new javax.swing.JPanel();
+        btnLigne0 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         PanneauGrille.setBackground(new java.awt.Color(255, 51, 51));
 
+        btnLigne0.setText("jButton1");
+        btnLigne0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLigne0ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PanneauGrilleLayout = new javax.swing.GroupLayout(PanneauGrille);
         PanneauGrille.setLayout(PanneauGrilleLayout);
         PanneauGrilleLayout.setHorizontalGroup(
             PanneauGrilleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(PanneauGrilleLayout.createSequentialGroup()
+                .addGap(37, 37, 37)
+                .addComponent(btnLigne0)
+                .addContainerGap(288, Short.MAX_VALUE))
         );
         PanneauGrilleLayout.setVerticalGroup(
             PanneauGrilleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(PanneauGrilleLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(btnLigne0)
+                .addContainerGap(355, Short.MAX_VALUE))
         );
 
         getContentPane().add(PanneauGrille, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 400, 400));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnLigne0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLigne0ActionPerformed
+        this.grille.activerLigneDeCellules(0);
+        repaint();
+    }//GEN-LAST:event_btnLigne0ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -108,5 +133,6 @@ public class FenetrePrincipale extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PanneauGrille;
+    private javax.swing.JButton btnLigne0;
     // End of variables declaration//GEN-END:variables
 }

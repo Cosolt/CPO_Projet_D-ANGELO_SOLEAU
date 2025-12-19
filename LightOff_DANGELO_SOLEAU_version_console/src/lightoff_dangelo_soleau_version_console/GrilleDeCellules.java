@@ -74,6 +74,10 @@ public class GrilleDeCellules {
         }
     }
     
+    public void activerLigneDeCellules(int idLigne){
+        
+    }
+    
     
     
     /**
