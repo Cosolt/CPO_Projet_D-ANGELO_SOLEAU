@@ -11,7 +11,6 @@ import java.util.Random;
  * @author evada
  */
 public class GrilleDeCellules {
-    // Création des attributs
     int nbLignes;
     int nbColonnes;
     CelluleLumineuse[][] matriceCellules;
