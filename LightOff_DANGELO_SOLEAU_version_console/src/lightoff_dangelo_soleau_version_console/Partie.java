@@ -15,6 +15,8 @@ public class Partie {
     private int maxCoups;
     private GrilleDeCellules grille;
     
+    
+    
     /**
      * Initialise les variables d'état de la partie
      * @param grille
@@ -25,6 +27,8 @@ public class Partie {
         this.grille = grille;
         this.maxCoups = maxCoups;
     }
+    
+    
     
     /**
      * Initialise la partie en mélengeant la grille de manière aléatoire 
@@ -37,8 +41,36 @@ public class Partie {
         }
     }
     
+    
+    
     /**
-     *
+    * Active la cellule spécifiée et ses voisines directes
+    */
+    private void activerCelluleEtVoisines(int ligne, int colonne) {
+        grille.matriceCellules[ligne][colonne].activerCellule();
+
+        // Activer les voisins si dans les limites
+        if (ligne > 0) {
+            grille.matriceCellules[ligne - 1][colonne].activerCellule(); // Haut
+        }
+        if (ligne < grille.nbLignes - 1) {
+            grille.matriceCellules[ligne + 1][colonne].activerCellule(); // Bas
+        }
+        if (colonne > 0) {
+            grille.matriceCellules[ligne][colonne - 1].activerCellule(); // Gauche
+        }
+        if (colonne < grille.nbColonnes - 1) {
+            grille.matriceCellules[ligne][colonne + 1].activerCellule(); // Droite
+        }
+    }
+    
+    
+    
+    /**
+     * Lance la partie interactive
+     * Active la cellule renseignée par le joueur ainsi que les voisines à celle-ci
+     * Affiche l'état actuel de la grille après chaque coup
+     * La partie se termine lorsque toutes les cellules sont éteintes ou que le nombre maximal de coups est atteint
      */
     public void lancerPartie() {
         Scanner scanner = new Scanner(System.in);
@@ -80,27 +112,10 @@ public class Partie {
     }
 
     
-    
-     private void activerCelluleEtVoisines(int ligne, int colonne) {
-        grille.matriceCellules[ligne][colonne].activerCellule();
-
-        // Activer les voisins si dans les limites
-        if (ligne > 0) {
-            grille.matriceCellules[ligne - 1][colonne].activerCellule(); // Haut
-        }
-        if (ligne < grille.nbLignes - 1) {
-            grille.matriceCellules[ligne + 1][colonne].activerCellule(); // Bas
-        }
-        if (colonne > 0) {
-            grille.matriceCellules[ligne][colonne - 1].activerCellule(); // Gauche
-        }
-        if (colonne < grille.nbColonnes - 1) {
-            grille.matriceCellules[ligne][colonne + 1].activerCellule(); // Droite
-        }
-    }
-    
      
-     
+    /**
+    * Active uniquement la cellule spécifiée
+    */
     private void activerCellule(int ligne, int colonne) {
         grille.matriceCellules[ligne][colonne].activerCellule();
     }
