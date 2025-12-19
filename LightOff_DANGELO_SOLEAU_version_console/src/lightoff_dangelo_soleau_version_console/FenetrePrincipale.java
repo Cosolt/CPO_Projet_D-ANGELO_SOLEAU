@@ -1,3 +1,5 @@
+package lightoff_dangelo_soleau_version_console;
+
 
 import java.awt.GridLayout;
 import javax.swing.JButton;
@@ -18,11 +20,19 @@ public class FenetrePrincipale extends javax.swing.JFrame {
     /**
      * Creates new form FenetrePrincipale
      */
+    
+    GrilleDeCellules grille;
+    int nbCoups;
+    
+    
     public FenetrePrincipale() {
         initComponents();
         
+       
+        
         int nbLignes = 5;
         int nbColonnes = 5;
+        this.grille = new GrilleDeCellules(nbLignes, nbColonnes);
         PanneauGrille.setLayout(new GridLayout(nbLignes, nbColonnes));
         for (int i=0; i < nbLignes; i++) {
             for (int j=0; j < nbColonnes; j++ ) {
@@ -31,10 +41,13 @@ public class FenetrePrincipale extends javax.swing.JFrame {
             }
         }
 
-        
-        
-        
     }
+        public void initialiserPartie() {
+            grille.cellulesToutesEteintes();
+            grille.melangerMatriceAleatoirement(10);
+        }
+        
+        
 
     /**
      * This method is called from within the constructor to initialize the form.
