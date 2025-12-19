@@ -4,6 +4,8 @@
  */
 package lightoff_dangelo_soleau_version_console;
 
+import java.util.Scanner;
+
 /**
  *
  * @author colin
@@ -14,12 +16,17 @@ public class LightOff_DANGELO_SOLEAU_version_console {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        CelluleLumineuse cellule = new CelluleLumineuse() ;
-        cellule.activerCellule() ;
-        cellule.eteindreCellule() ;
-       
         GrilleDeCellules grille = new GrilleDeCellules(5, 5) ;
         System.out.println(grille);
+        
+        int maxCoups = 10;
+        
+        Partie partie = new Partie(grille, maxCoups);
+        partie.initialiserPartie();
+        partie.lancerPartie();
+        
+        
+        
         
     }
     
